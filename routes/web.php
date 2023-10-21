@@ -1,0 +1,18 @@
+<?php
+use Illuminate\Support\Facades\Route;
+//ホームページ
+Route::get('/home', [App\Http\Controllers\accunt_masterController::class, 'home'])->name('home');
+//アカウント一覧ページ
+Route::get('/accounts', [App\Http\Controllers\accunt_masterController::class, 'accounts'])->name('accounts');
+//新規会員登録ページ
+Route::get('/registration',[App\Http\Controllers\accunt_masterController::class, 'registration'])->name('registration');
+//確認ページ
+Route::post('/confirm',[App\Http\Controllers\accunt_masterController::class, 'confirm'])->name('confirm');
+//アカウントリスト
+Route::get('/accounts_list',[App\Http\Controllers\accunt_masterController::class, 'accounts_list'])->name('accounts_list');
+//編集ページ
+Route::get('/edit/{id}',[App\Http\Controllers\accunt_masterController::class, 'edit'])->name('edit');
+//修正
+Route::put('/update/{id}',[App\Http\Controllers\accunt_masterController::class, 'update'])->name('update');
+//削除
+Route::delete('/destroy/{id}',[App\Http\Controllers\accunt_masterController::class, 'destroy'])->name('destroy');
