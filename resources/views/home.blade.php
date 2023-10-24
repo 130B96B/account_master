@@ -7,7 +7,7 @@
 <div class="space">
     <label class="Member_registration">アカウント登録</label>
     <ul class="members">
-          <li class="member">アカウント一覧</li>
+          <li class="member"><a href="{{ route('accounts_list') }}">アカウント一覧</a></li>
     </ul>
 </div>
 </div>

@@ -26,7 +26,7 @@
     @endif
 <div class="Form-Item">
     <p class="Form-Item-Label"><span class="hissu">必須</span>パスワード</p>
-    <input name="password" value="{{ old('password') }}" type="text" placeholder="例）password" class="Form-Item-Input">
+    <input name="password" value="{{ old('password') }}" type="password" placeholder="例）password" class="Form-Item-Input">
 </div>
     @if ($errors->has('password'))
         <p class="error-message">{{ $errors->first('password') }}</p>
@@ -47,7 +47,8 @@
     @endif
 <div class="Form-Item">
     <p class="Form-Item-Label"><span class="hissu">必須</span>都道府県</p>
-    <select name="prefecture" class="Form-Item-Input-ex">                       
+    <select name="prefecture" class="Form-Item-Input-ex">  
+    <option value="">未選択</option>                     
     @foreach(config('pref') as $key => $score)
         <option value="{{ $score }}" {{ old('prefecture') === $score ? 'selected' : ''}}>{{ $score }}</option>
     @endforeach
@@ -71,7 +72,7 @@
         <p class="error-message">{{ $errors->first('address') }}</p>
     @endif
  <div class="Form-Item">
-    <p class="Form-Item-Label Msg"><span class="hissu">必須</span>備考欄</p>
+    <p class="Form-Item-Label Msg">備考欄</p>
     <textarea name="contact_body" class="Form-Item-Textarea" rows="5">{{ old('contact_body') }}</textarea>
 </div>
     @if ($errors->has('contact_body'))

@@ -385,21 +385,30 @@ h1{
     font-weight: bold;
     font-size: 20px;
 }
+.A{
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
 .new_registration{
     border-radius: 6px;
-    margin-top: 25px;
-    margin-left: 1620px;
-    margin-bottom: 25px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: block;
-    text-align: center;
+    padding: 20px 5px;
     letter-spacing: 0.05em;
     background: #b6e2cd;
     color: #f8fcf9;
     font-weight: bold;
     font-size: 26px;
 }
+
+.accountlist{
+    padding-top: 20px;
+    margin-left: 60px;
+    letter-spacing: 0.05em;
+    font-size: 26px;
+}
+
 .table {
     margin: 0px 60px;
     border-collapse: collapse;

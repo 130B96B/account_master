@@ -49,7 +49,7 @@
   </div>
   <input name="address" value="{{ $inputs['address'] }}" type="hidden">
   <div class="Form-Item">
-  <label>お問い合わせ内容:</label>
+  <label>備考欄:</label>
   {!! nl2br(e($inputs['contact_body'])) !!}
   </div>
   <input name="contact_body" value="{{ $inputs['contact_body'] }}" type="hidden">

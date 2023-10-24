@@ -24,12 +24,12 @@ class accunt_masterController extends Controller
         'furigana' => ['required','max:30'],
         'name' => ['required','max:30'],
         'tel' => ['required','regex:/^[0-9\-]+$/'],
-        'password' => 'required',
+        'password' =>  ['required','min:8'],
         'postalcode' => ['required','regex:/^[0-9\-]+$/'],
         'prefecture' => 'required',
         'cities' => ['required','max:30'],
         'address' => ['required','max:50'],
-        'contact_body' => ['required','max:255'],
+        'contact_body' => ['max:255','nullable',]
         ],[
             'name.required' =>  '会員名 は必須項目です。',
             'furigana.required' =>  'フリガナ は必須項目です。',
@@ -42,6 +42,7 @@ class accunt_masterController extends Controller
             'address.required' =>  '番号・アパート名 は必須項目です。',
             'name.max' =>  '会員名は30文字より多く記入出来ません。',
             'furigana.max' =>  'フリガナは30文字より多く記入出来ません。',
+            'password.min' =>  'パスワードは8文字以上にしてください。',
             'cities.max' =>  '市区町村は30文字より多く記入出来ません。',
             'address.max' =>  '番号・アパート名は50文字より多く記入出来ません。',
             'contact_body.max' =>  '備考欄は255文字より多く記入出来ません。',
@@ -49,7 +50,6 @@ class accunt_masterController extends Controller
             'postalcode.regex' =>  'ハイフン付き半角数字のみ記入してください。',
             'email.email' =>  'メールアドレスを記入してください。',
             'email.unique' => 'このメールアドレスは既に登録されています。',
-            'contact_body.required' =>  '備考欄 は必須項目です。',
         ]);
 
         $post = new accunts();
@@ -90,16 +90,16 @@ class accunt_masterController extends Controller
 public function update(Request $request, $id)
 {
     $request->validate([
-        'email' => ['required','email','unique:accuntmaster'],
+        'email' => ['required','email'],
         'furigana' => ['required','max:30'],
         'name' => ['required','max:30'],
         'tel' => ['required','regex:/^[0-9\-]+$/'],
-        'password' => 'required',
+        'password' =>   ['required','min:8'],
         'postalcode' => ['required','regex:/^[0-9\-]+$/'],
         'prefecture' => 'required',
         'cities' => ['required','max:30'],
         'address' => ['required','max:50'],
-        'contact_body' => ['required','max:255'],
+        'contact_body' => 'max:255',
         ],[
             'name.required' =>  '会員名 は必須項目です。',
             'furigana.required' =>  'フリガナ は必須項目です。',
@@ -112,14 +112,13 @@ public function update(Request $request, $id)
             'address.required' =>  '番号・アパート名 は必須項目です。',
             'name.max' =>  '会員名は30文字より多く記入出来ません。',
             'furigana.max' =>  'フリガナは30文字より多く記入出来ません。',
+            'password.min' =>  'パスワードは8文字以上にしてください。',
             'cities.max' =>  '市区町村は30文字より多く記入出来ません。',
             'address.max' =>  '番号・アパート名は50文字より多く記入出来ません。',
             'contact_body.max' =>  '備考欄は255文字より多く記入出来ません。',
             'tel.regex' =>  'ハイフン付き半角数字のみ記入してください。',
             'postalcode.regex' =>  'ハイフン付き半角数字のみ記入してください。',
             'email.email' =>  'メールアドレスを記入してください。',
-            'email.unique' => 'このメールアドレスは既に登録されています。',
-            'contact_body.required' =>  '備考欄 は必須項目です。',
         ]);
 
     $post = accunts::find($id);

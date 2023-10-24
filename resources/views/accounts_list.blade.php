@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<li class="new_registration"><a href="{{ route('registration') }}">新規登録</a></li>
+<div class=A>
+<div class=accountlist>アカウント一覧</div>
+<div class="new_registration"><a href="{{ route('registration') }}">新規登録</a></div>
+</div>
+
     <table class="table" id="table">
         <tr>
             <th>編集</th>
