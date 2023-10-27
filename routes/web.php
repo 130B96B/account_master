@@ -16,3 +16,5 @@ Route::get('/edit/{id}',[App\Http\Controllers\accunt_masterController::class, 'e
 Route::put('/update/{id}',[App\Http\Controllers\accunt_masterController::class, 'update'])->name('update');
 //削除
 Route::delete('/destroy/{id}',[App\Http\Controllers\accunt_masterController::class, 'destroy'])->name('destroy');
+//お問い合わせ一覧
+Route::get('/contacts',[App\Http\Controllers\accunt_masterController::class, 'contacts'])->name('contacts');

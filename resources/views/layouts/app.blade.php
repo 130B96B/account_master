@@ -29,7 +29,7 @@
         <ul class="nav__items">
             <li class="nav-items__item"><a href="{{ route('home') }}">HOME</a></li>
             <li class="nav-items__item"><a href="{{ route('accounts_list') }}">アカウント一覧</a></li>
-            <li class="nav-items__item"><a href="">お問い合わせ一覧</a></li>
+            <li class="nav-items__item"><a href="{{ route('contacts') }}">お問い合わせ一覧</a></li>
         </ul>
     </div>
 </div>

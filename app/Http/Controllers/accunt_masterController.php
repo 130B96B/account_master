@@ -137,4 +137,10 @@ public function update(Request $request, $id)
 
     return redirect()->route('accounts_list')->with('success', '投稿が更新されました');
 }
+
+public function contacts()
+{   $posts = contacts::paginate(5);
+    return view('contacts', ['posts' => $posts]);
+}
+
 }
