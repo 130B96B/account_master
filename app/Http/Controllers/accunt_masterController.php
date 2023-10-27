@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\accunts;
+use App\Models\contacts;
 
 class accunt_masterController extends Controller
 {
