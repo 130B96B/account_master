@@ -15,12 +15,14 @@
         </tr>
         @foreach ($posts as $post)
         <tr>
-            <td><a href="{{route('edit',['id' => $post->id]) }}"><button class="edit">編集</button></a></td>
-            <td>{{ $post->status }}</td>
+            <td><a href="{{route('contacts_edit',['id' => $post->id]) }}"><button class="edit">編集</button></a></td>
+            <td>{{ $correspondence[$post->status] }}</td>
             <td>{{ $post->email }}</td>
             <td>{{ $post->name }}</td>
             <td>{{ $post->tel}}</td>
         </tr>
         @endforeach
     </table>
+   <div class=pagenation> {{ $posts->links() }} </div>
+
 @endsection

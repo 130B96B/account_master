@@ -453,3 +453,52 @@ h1{
     border: none;
     cursor: pointer;
 }
+
+.pagenation{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.contacts_edit{
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 24px;
+    max-width: 1500px;
+    font-size: 26px;
+}
+
+.contactsedit{
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1500px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+}
+
+.contactsItem{
+    padding-left: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+}
+
+p {
+    padding-left: 30px;
+    line-height: 1.5;
+  }
+
+.Item-Input-ex{
+    width: 1400px;
+    background: #eaedf2;
+    height: 30px;
+}
+
+.Item-Textarea{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 95%;
+    font-size: 18px;
+}
