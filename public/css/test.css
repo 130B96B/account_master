@@ -469,6 +469,7 @@ h1{
 
 .contactsedit{
     margin-top: 30px;
+    margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
     max-width: 1500px;
@@ -501,4 +502,16 @@ p {
     border-radius: 6px;
     width: 95%;
     font-size: 18px;
+}
+
+.btn2{
+    border-radius: 6px;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: auto;
+    padding: 10px;
+    width: auto;
+    display: block;
+    letter-spacing: 0.05em;
+    font-size: 20px;
 }

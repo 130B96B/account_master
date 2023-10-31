@@ -69,7 +69,7 @@
   </div>
   <input name="occupation" value="{{ $posts['occupation'] }}" type="hidden">
 
-  <button type="submit" class="btn">更新</button>
+  <button type="submit" class="btn2">登録する</button>
 </div>
 </form>
 @endsection 
