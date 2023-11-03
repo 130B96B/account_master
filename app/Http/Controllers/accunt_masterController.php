@@ -145,7 +145,7 @@ public function contacts()
         'Processing' => '対応中',
         'Closed' => '対応済',
         ];
-    $posts = contacts::simplepaginate(5);
+    $posts = contacts::simplepaginate(10);
     return view('contacts', ['posts' => $posts],compact('correspondence'));
 }
 
